@@ -1,0 +1,168 @@
+/* Base Styles*/
+* { box-sizing: border-box;}
+
+body { margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.6;
+  color: #222;
+  background-color: #faf7fb; }
+
+img { max-width: 100%;
+  height: auto;
+  display: block; }
+
+a { text-decoration: none;
+  color: inherit; }
+
+/* Layout */
+.container { width: min(1100px, 92%);
+  margin: 0 auto; }
+
+.section { padding: 3rem 0; }
+
+.why { background-color: #f4f0f7;}
+
+.programs { padding-top: 1rem; }
+
+/* Header and Navigation */
+.site-header { display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1rem 4%;
+  background-color: #2d123f;
+  color: #fff; }
+
+.brand-link { font-size: 1.2rem;
+  font-weight: 700;
+  letter-spacing: 0.3px; }
+
+.nav-list { list-style: none;
+  display: flex;
+  gap: 0.75rem;
+  padding: 0;
+  margin: 0; }
+
+.nav-link { display: inline-block;
+  padding: 0.5rem 0.75rem;
+  border-radius: 999px;
+  color: #fff;
+  transition: background 0.2s ease; }
+
+.nav-link:hover,
+.nav-link:focus { background-color: rgba(242, 193, 78, 0.22); }
+
+/* Hero Section */
+.hero { position: relative;
+  min-height: 420px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+
+  background: url("../images/hero-flower-painting.jpg") 70% center/cover no-repeat; }
+
+.hero::before { content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45); }
+
+.hero-text { position: relative;
+  color: #fff;
+  width: min(800px, 92%);
+  padding: 2rem 1rem; }
+
+.hero-text h1 { margin: 0 0 0.5rem;
+  font-size: clamp(2rem, 4vw, 3rem); }
+
+.hero-text p { margin: 0 0 1rem;
+  font-size: 1.1rem; }
+
+.byline { margin-top: 0.5rem;
+  font-size: 0.95rem;
+  font-weight: 500;
+  opacity: 0.85; }
+
+/* Subpages */
+.hero-small { min-height: 280px; }
+
+.hero-classes { background-position: 70% center; }
+
+/* Cards */
+.card-grid { display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-top: 1.25rem; }
+
+.card-grid .card { flex: 1 1 300px;}
+
+.card { background: #fff;
+  border-radius: 16px;
+  padding: 1.25rem;
+  border: 2px solid rgba(242, 193, 78, 0.25);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08); }
+
+.card img { width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-bottom: 1rem; }
+
+.card h3 { margin-top: 0;
+  color: #2d123f; }
+
+/* Pricing Table */
+.table-wrap { overflow-x: auto;
+  margin-top: 1rem; }
+
+.pricing-table { width: 100%;
+  border-collapse: collapse;
+  background: #fff;
+  border-radius: 16px;
+  overflow: hidden; }
+
+.pricing-table caption { text-align: left;
+  font-weight: 700;
+  padding: 1rem 1rem 0.5rem;
+  color: #2d123f; }
+
+.pricing-table th,
+.pricing-table td { padding: 0.9rem 1rem;
+  text-align: left;
+  border: none; }
+
+.pricing-table thead th { background: rgba(45, 18, 63, 0.06);
+  color: #2d123f; }
+
+.pricing-table tbody tr + tr { border-top: 1px solid rgba(0, 0, 0, 0.06); }
+
+/* Button */
+.btn { display: inline-block;
+  background-color: #f2c14e;
+  color: #2d123f;
+  font-weight: 700;
+  padding: 0.7rem 1.1rem;
+  border-radius: 999px;
+  transition: all 0.25s ease; }
+
+.btn:hover,
+.btn:focus { background-color: #e0b03c;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15); }
+
+/* Footer */
+.site-footer { text-align: center;
+  padding: 1.25rem 4%;
+  background-color: #2d123f;
+  color: #fff; }
+
+/* Responsive Design */
+@media (max-width: 900px) {
+  .card-grid .card { flex: 1 1 340px; } }
+
+@media (max-width: 600px) {
+  .site-header { flex-direction: column; align-items: flex-start; }
+  .nav-list { flex-wrap: wrap; }
+  .card-grid .card { flex: 1 1 100%; }
+  .hero { min-height: 360px; }
+}
