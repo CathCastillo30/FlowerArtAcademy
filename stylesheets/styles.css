@@ -188,6 +188,13 @@ a { text-decoration: none;
   border-color: #f2c14e;
   box-shadow: 0 0 0 2px rgba(242, 193, 78, 0.3); }
 
+  .form-message {
+  min-height: 1.25rem;
+  margin: 0.25rem 0 0.5rem;
+  font-weight: 700;
+  color: #b00020;
+}
+
 /* Services Page */
 .services-list { margin-top: 1.5rem;
   padding-left: 1.5rem; }
